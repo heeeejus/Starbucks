@@ -1,20 +1,3 @@
-const searchEl = document.querySelector('.search');
-const searchinputEl = searchEl.querySelector('input');
-
-searchEl.addEventListener('click', function (){
-  searchinputEl.focus();
-});
-
-searchinputEl.addEventListener('focus', function () {
-  searchEl.classList.add('focused');
-  searchinputEl.setAttribute('placeholder', '통합검색');
-});
-
-searchinputEl.addEventListener('blur', function () {
-  searchEl.classList.remove('focused');
-  searchinputEl.setAttribute('placeholder', '');
-});
-
 const badgeEl = document.querySelector('header .badges');
 const toTopEl = document.querySelector('#to-top');
 
@@ -132,6 +115,3 @@ function floatingObject(selector, delay, size) {
 floatingObject('.floating1', 1, 15);
 floatingObject('.floating2', .5, 15);
 floatingObject('.floating3', 1.5, 20);
-
-const thisYear = document.querySelector('.this-year');
-thisYear.textContent = new Date().getFullYear(); //년도 반환
